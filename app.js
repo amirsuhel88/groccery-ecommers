@@ -10,6 +10,12 @@ const start = async () => {
   await connectDB(process.env.MONGO_URI);
   const app = fastify();
 
+  // const ci/cd
+
+  const amir = "this is for ci/cd testing";
+
+  console.log(amir);
+
   app.register(fastifySocketIO, {
     cors: {
       origin: "*",
